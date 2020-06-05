@@ -1,3 +1,15 @@
+# 本人工作
+
+二级模块 “调拨控制” 的后端代码
+
+## 申请选择界面
+
+![](https://images.cnblogs.com/cnblogs_com/uoa7/1780821/o_200605040644pharmacy_apply_select.png)
+
+## 申请确认界面
+
+![](https://images.cnblogs.com/cnblogs_com/uoa7/1780821/o_200605040706pharmacy_apply_confirm.png)
+
 # 项目功能结构
 
 | 一级模块     | 二级模块       | 三级模块         | 四级模块                   | 功能说明                                                     |
