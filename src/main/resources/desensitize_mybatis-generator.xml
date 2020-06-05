@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+    <!--todo 数据库连接地址&账号密码-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL=""
+                        userId=""
+                        password="">
+        </jdbcConnection>
+    <!--todo 数据库连接地址&账号密码-->
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+    <!--生成的Model类(DataObject类)存放位置-->
+        <javaModelGenerator targetPackage="com.miaosha.dataobject" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+    <!--生成的DAO类的存放位置-->
+    <!--    type = "ANNOTATEDMAPPER", 生成 JavaModel 和 基于注解的Mapper对象-->
+    <!--    type = "MIXEDMAPPER", 生成 基于注解的JavaModel 和 相应的Mapper对象-->
+    <!--    type = "XMLMAPPER", 生成SQLMap XML文件和独立的Mapper接口-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.miaosha.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+    <!--生成的SQL映射文件的存放地点（SQL语句）-->
+        <sqlMapGenerator targetPackage="mapping" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+
+    <!--需要自动生成的表, 和生成后的dataobject的名称-->
+    <!--已经生成的表一定要注释掉，不注释掉再次运行时，会把自己写的sql给覆盖掉了-->
+    <!--没有这一堆false, 除了生成**DO.java, 还会生成*DOExample.java(进行复杂SQL查询的,基本不会用到)-->
+        <table tableName = "sat_details" domainObjectName="SatDetailsDO"
+        enableUpdateByExample="false"
+        enableDeleteByExample="false"
+        enableSelectByExample="false"
+        selectByExampleQueryId="false"
+        enableCountByExample="false"></table>
+        <!--<table tableName = "drug" domainObjectName="DrugDO"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableCountByExample="false"></table>
+        <table tableName = "drug_of_table" domainObjectName="DrugOfTableDO"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableCountByExample="false"></table>
+
+        <table tableName = "user_info" domainObjectName="UserDO"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableCountByExample="false"></table>
+        <table tableName = "user_password" domainObjectName="UserPasswordDAO"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableCountByExample="false"></table>
+        <table tableName="item" domainObjectName="ItemDAO"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableCountByExample="false"></table>
+
+        <table tableName = "item_stock" domainObjectName="ItemStockDAO"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableCountByExample="false"></table>
+
+        <table tableName = "order_info" domainObjectName="OrderDAO"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableCountByExample="false"></table>
+
+        <table tableName = "sequence_info" domainObjectName="SequenceInfoDAO"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableCountByExample="false"></table>
+               -->
+    </context>
+</generatorConfiguration>
